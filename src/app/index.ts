@@ -24,7 +24,7 @@ import routes from './routes';
 @RouteConfig(routes)
 
 export class App {
-    url: string = 'https://github.com/ocombe/ng2-webpack';
+    url: string = '//github.com/cmelion/generator-ng2-webpack';
 
     constructor(public api: Api) {
     }
