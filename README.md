@@ -1,3 +1,5 @@
+#Demo output from [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
+
 You have access to the following sub generators:
 * **yo ng2-webpack:service** (Creates a service)
 * **yo ng2-webpack:pipe** (Creates a pipe)
