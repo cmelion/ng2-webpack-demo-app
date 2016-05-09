@@ -1,5 +1,16 @@
 # Demo Docker Workflow for [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
 
+A Docker based worflow is a little different from the typical `npm install` followed by `npm start`  routine.
+There is no local node_modules folder and all npm modules used are global modules.
+
+Steps:
+* Open a terminal
+* `npm install -g docker-run` which adds support for [running docker from npm](https://github.com/mafintosh/docker-run)
+* `npm run docker-start` from a terminal or use the npm tool window
+* Once processing completes, open a browser window at http://localhost:8080
+* Make some changes in ng2-webpack-demo-app/src/app/components/home/template.html
+* Observe that your changes are reflected in the browser without having to refresh
+
 You have access to the following sub generators:
 * **yo ng2-webpack:service** (Creates a service)
 * **yo ng2-webpack:pipe** (Creates a pipe)
