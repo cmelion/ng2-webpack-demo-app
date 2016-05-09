@@ -1,4 +1,4 @@
-#Demo output from [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
+# Demo Docker Workflow for [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
 
 You have access to the following sub generators:
 * **yo ng2-webpack:service** (Creates a service)
@@ -17,11 +17,12 @@ For a complete list of available commands and to add tab auto-completion, run th
 which will produce the following output    
 ```
 
-build             docs              new-directive     server            webdriver-start
-ci                e2e               new-interface     start             webdriver-update
-clean             e2e-live          new-pipe          test              
-clean-install     lint              new-service       test-watch        
-clean-start       new-component     postinstall       watch      
+build                 docker-open-terminal  e2e-live              new-service           watch
+ci                    docker-server         lint                  postinstall           webdriver-start
+clean                 docker-start          new-component         server                webdriver-update
+clean-install         docker-stop           new-directive         start                 
+clean-start           docs                  new-interface         test                  
+delayed-open          e2e                   new-pipe              test-watch    
  
 ```
 
