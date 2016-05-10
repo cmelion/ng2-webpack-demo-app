@@ -1,7 +1,7 @@
 # Demo Docker Workflow for [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
 
 A Docker based worflow is a little different from the typical `npm install` followed by `npm start`  routine.
-There is no local node_modules folder and all npm modules used are global modules.
+There is no local node_modules folder and all npm modules used are global modules (for more info see [sample docker workflow](https://github.com/cmelion/generator-ng2-webpack/wiki/Sample-Docker-Workflow) ).
 
 Steps:
 * Open a terminal
