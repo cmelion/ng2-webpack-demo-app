@@ -1,42 +1,49 @@
 /// <reference path="../../../../../../typings/tsd.d.ts" />
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+// No type definition available quick and dirty require instead
 var NotificationSystem = require('react-notification-system');
 
+class NGReactProps {
+    public message: string;
+}
 
-var NGReactComponent = React.createClass<any>({
-    _notificationSystem: null,
+class NGReactComponent extends React.Component<NGReactProps, any> {
+    public _notificationSystem = null;
 
-    _addNotification: function(event) {
-        event.preventDefault();
+    constructor(props:NGReactProps) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this._notificationSystem = this.refs.notificationSystem;
+    }
+
+    _addNotification() {
         this._notificationSystem.addNotification({
             message: this.props.message,
             level: 'success'
         });
-    },
+    }
 
-    componentDidMount: function() {
-        this._notificationSystem = this.refs.notificationSystem;
-    },
-    render: function(){
-
+    render() {
         return (
             <div>
                 <p>Say Hello From React!</p>
                 <p>
-                    <button onClick={this._addNotification}>Hello</button>
+                    <button onClick={this._addNotification.bind(this)}>Hello</button>
                 </p>
                 <NotificationSystem ref="notificationSystem" />
             </div>
-        );
+        )
     }
-});
+}
 
 export class NGReact{
-
     static initialize(message){
-        ReactDOM.render(<NGReactComponent message={message} />, document.getElementById('ng-react-component'));
+        ReactDOM.render(<NGReactComponent message={message}/>, document.getElementById('ng-react-component'));
     }
 
 }
