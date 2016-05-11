@@ -7,7 +7,7 @@ Steps:
 * Open a terminal
 * `npm install -g docker-run` which adds support for [running docker from npm](https://github.com/mafintosh/docker-run)
 * `npm run docker-start` from a terminal or use the npm tool window
-* Once processing completes, open a browser window at http://localhost:8080
+* Once processing completes, open a browser window at http://localhost:2368
 * Make some changes in ng2-webpack-demo-app/src/app/components/home/template.html
 * Observe that your changes are reflected in the browser without having to refresh
 
@@ -62,7 +62,7 @@ $ cd my-app
 $ npm start
 ```
 
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+go to [http://localhost:2368](http://localhost:2368) in your browser.
 
 # Table of Contents
 
