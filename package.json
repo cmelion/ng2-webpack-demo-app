@@ -9,6 +9,7 @@
     "delayed-open": "sleep 5 && open http://localhost:8080",
     "docker-open-terminal": "docker exec -i ${PWD##*/} /bin/bash",
     "docker-server": "webpack-dev-server --host=0.0.0.0 --hot --inline  --progress --port 8080 & wait",
+    "predocker-start": "docker pull cmelion/generator-ng2-webpack:latest",
     "docker-start": "docker run --rm --name ${PWD##*/} -i -p 8080:8080 -v $(pwd)/package.json:/home/yeoman/client/package.json -v $(pwd)/src:/home/yeoman/client/src cmelion/generator-ng2-webpack:latest",
     "docker-stop": "docker stop ${PWD##*/}" ,
     "watch": "webpack --watch --progress --profile",
