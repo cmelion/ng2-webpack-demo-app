@@ -35,7 +35,7 @@ describe('App', () => {
   ]);
 
   it('should have an url', inject([App], (app:App) => {
-    expect(app.url).toEqual('https://github.com/ocombe/ng2-webpack');
+    expect(app.url).toEqual('//github.com/cmelion/generator-ng2-webpack');
   }));
 
   describe('pipes', function() {});

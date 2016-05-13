@@ -11,7 +11,7 @@ class NGReactProps {
 }
 
 class NGReactComponent extends React.Component<NGReactProps, any> {
-    public _notificationSystem = null;
+    private _notificationSystem = null;
 
     constructor(props:NGReactProps) {
         super(props);
