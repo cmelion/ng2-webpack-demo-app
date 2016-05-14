@@ -1,4 +1,15 @@
-#Demo output from [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
+# Demo Docker Workflow for [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
+
+A Docker based worflow is a little different from the typical `npm install` followed by `npm start`  routine.
+There is no local node_modules folder and all npm modules used are global modules (for more info see [sample docker workflow](https://github.com/cmelion/generator-ng2-webpack/wiki/Sample-Docker-Workflow) ).
+
+Steps:
+* Open a terminal
+* `npm install -g docker-run` which adds support for [running docker from npm](https://github.com/mafintosh/docker-run)
+* `npm run docker-start` from a terminal or use the npm tool window
+* Once processing completes, open a browser window at http://localhost:2368
+* Make some changes in ng2-webpack-demo-app/src/app/components/home/template.html
+* Observe that your changes are reflected in the browser without having to refresh
 
 You have access to the following sub generators:
 * **yo ng2-webpack:service** (Creates a service)
@@ -17,11 +28,12 @@ For a complete list of available commands and to add tab auto-completion, run th
 which will produce the following output    
 ```
 
-build             docs              new-directive     server            webdriver-start
-ci                e2e               new-interface     start             webdriver-update
-clean             e2e-live          new-pipe          test              
-clean-install     lint              new-service       test-watch        
-clean-start       new-component     postinstall       watch      
+build                 docker-open-terminal  e2e-live              new-service           watch
+ci                    docker-server         lint                  postinstall           webdriver-start
+clean                 docker-start          new-component         server                webdriver-update
+clean-install         docker-stop           new-directive         start                 
+clean-start           docs                  new-interface         test                  
+delayed-open          e2e                   new-pipe              test-watch    
  
 ```
 
@@ -50,7 +62,7 @@ $ cd my-app
 $ npm start
 ```
 
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+go to [http://localhost:2368](http://localhost:2368) in your browser.
 
 # Table of Contents
 

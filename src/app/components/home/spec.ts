@@ -5,7 +5,7 @@ import {
   describe,
   ddescribe,
   beforeEachProviders,
-} from 'angular2/testing';
+} from '@angular/core/testing';
 
 // Load the implementations that should be tested
 import {Home} from './index';

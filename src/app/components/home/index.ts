@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {FORM_DIRECTIVES} from 'angular2/common';
+import {Component, OnInit} from '@angular/core';
+import {FORM_DIRECTIVES} from '@angular/common';
 
 @Component({
   selector: 'home',
@@ -9,10 +9,14 @@ import {FORM_DIRECTIVES} from 'angular2/common';
   template: require('./template.html')
 })
 
-export class Home {
+export class Home implements OnInit {
 
   constructor() {
     // Do stuff
+  }
+
+  ngOnInit() {
+    console.log('Hello Home');
   }
 
 }

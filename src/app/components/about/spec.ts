@@ -3,27 +3,28 @@ import {
     inject,
     injectAsync,
     describe,
-    beforeEachProviders,
-    TestComponentBuilder
-} from 'angular2/testing';
+    beforeEachProviders
+} from '@angular/core/testing';
 
-import {Component, provide} from 'angular2/core';
+import {Component, provide} from '@angular/core';
 
 // Load the implementations that should be tested
 import {About} from './index.async';
+import {NGReact} from './components/ng-react';
 
 describe('About', () => {
-  // provide our implementations or mocks to the dependency injector
-  beforeEachProviders(() => [
-    About
-  ]);
+    beforeAll(() => {
+        spyOn(NGReact,'initialize');
+    });
 
-  it('should log ngOnInit', inject([ About ], (about) => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
+    // provide our implementations or mocks to the dependency injector
+    beforeEachProviders(() => [
+        About
+    ]);
 
-    about.ngOnInit();
-    expect(console.log).toHaveBeenCalled();
-  }));
+    it('should log ngOnInit', inject([About], (about) => {
+        about.ngOnInit();
+        expect(NGReact.initialize).toHaveBeenCalled();
+    }));
 
 });

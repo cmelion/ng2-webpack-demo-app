@@ -1,6 +1,0 @@
-{
-  "generator-ng2-webpack": {
-    "appname": "test-ng-react",
-    "clientFolder": "src"
-  }
-}
