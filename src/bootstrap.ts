@@ -1,9 +1,10 @@
 /// <reference path="../typings/main.d.ts"/>
 
-import {enableProdMode} from "angular2/core";
-import {bootstrap, ELEMENT_PROBE_PROVIDERS} from 'angular2/platform/browser';
-import {ROUTER_PROVIDERS} from 'angular2/router';
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {enableProdMode} from "@angular/core";
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {ELEMENT_PROBE_PROVIDERS} from '@angular/platform-browser';
+import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
+import {HTTP_PROVIDERS} from '@angular/http';
 
 const ENV_PROVIDERS = [];
 // depending on the env mode, enable prod mode or add debugging modules

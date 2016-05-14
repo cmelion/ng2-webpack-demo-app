@@ -3,11 +3,10 @@ import {
     inject,
     injectAsync,
     describe,
-    beforeEachProviders,
-    TestComponentBuilder
-} from 'angular2/testing';
+    beforeEachProviders
+} from '@angular/core/testing';
 
-import {Component, provide} from 'angular2/core';
+import {Component, provide} from '@angular/core';
 
 // Load the implementations that should be tested
 import {About} from './index.async';

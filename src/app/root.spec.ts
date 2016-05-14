@@ -5,14 +5,13 @@ import {
   fdescribe,
   inject,
   injectAsync,
-  beforeEachProviders,
-  TestComponentBuilder,
-} from 'angular2/testing';
+  beforeEachProviders
+} from '@angular/core/testing';
 
 // to use Translate Service, we need Http, and to test Http we need to mock the backend
-import {BaseRequestOptions, Http, Response, ResponseOptions} from 'angular2/http';
-import {MockBackend} from 'angular2/http/testing';
-import {provide} from "angular2/core";
+import {BaseRequestOptions, Http, Response, ResponseOptions} from '@angular/http';
+import {MockBackend} from '@angular/http/testing';
+import {provide} from "@angular/core";
 
 // Load the implementations that should be tested
 import {Api} from './services/api/index';
