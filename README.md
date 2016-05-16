@@ -1,6 +1,6 @@
 # Demo Docker Workflow for [generator-ng2-webpack](https://github.com/cmelion/generator-ng2-webpack)
 
-A Docker based worflow is a little different from the typical `npm install` followed by `npm start`  routine.
+A Docker based workflow is a little different from the typical `npm install` followed by `npm start`  routine.
 There is no local node_modules folder and all npm modules used are global modules (for more info see [sample docker workflow](https://github.com/cmelion/generator-ng2-webpack/wiki/Sample-Docker-Workflow) ).
 
 Steps:
@@ -11,14 +11,8 @@ Steps:
 * Make some changes in ng2-webpack-demo-app/src/app/components/home/template.html
 * Observe that your changes are reflected in the browser without having to refresh
 
-You have access to the following sub generators:
-* **yo ng2-webpack:service** (Creates a service)
-* **yo ng2-webpack:pipe** (Creates a pipe)
-* **yo ng2-webpack:component** (Creates a component)
-* **yo ng2-webpack:directive** (Creates a directive)
-* **yo ng2-webpack:interface** (Creates an interface)
 
-You may prefer to use npm to run your sub-generators.
+Use npm to run sub-generators.
 For a complete list of available commands and to add tab auto-completion, run the following commands in a terminal:
 
     $ npm completion >> ~/.bashrc
@@ -37,18 +31,9 @@ delayed-open          e2e                   new-pipe              test-watch
  
 ```
 
-This workflow serves as a starting point for building component based Angular 2.0 applications using Webpack. 
+This workflow serves as a starting point for building component based Angular 2.0/React applications using Webpack. 
 
-* Heavily commented webpack configuration with reasonable defaults.
-* ES6, and ES7 support with babel.
-* Source maps included in all builds.
-* Development server with live reload.
-* Production builds with cache busting.
-* Testing environment using karma to run tests and jasmine as the framework.
-* Code coverage when tests are run.
-* No gulp and no grunt, just npm scripts.
 
->Warning: Make sure you're using the latest version of Node.js and NPM
 
 ### Quick start
 
@@ -117,23 +102,20 @@ go to [http://localhost:2368](http://localhost:2368) in your browser.
 
 What you need to run this app:
 * `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
-* Ensure you're running Node (`v4.1.x`+) and NPM (`2.14.x`+)
 
 ## Running the app
 
 After you have installed all dependencies you can now run the app with:
 ```bash
-npm start
+npm run docker-start
 ```
 
-It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
+It will start a server using `webpack-dev-server` in a docker container which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:2368`.
 
-## Developing
+## Developing in the Docker container
+* run `docker exec -it ${PWD##*/} /bin/bash` in a terminal window
 
 ### Build files
-
-* single run: `npm run build`
-* build files and watch: `npm run watch`
 
 ## Testing
 
