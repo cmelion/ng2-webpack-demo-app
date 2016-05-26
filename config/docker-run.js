@@ -1,3 +1,7 @@
+/*
+*  TODO:  Figure out why this prevents file-sync and hot-loading
+*  https://github.com/mafintosh/docker-run/issues/9
+*/
 var run = require('docker-run');
 
 var image = 'cmelion/generator-ng2-webpack:latest';
