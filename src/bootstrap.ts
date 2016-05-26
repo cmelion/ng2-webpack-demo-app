@@ -1,5 +1,5 @@
 /// <reference path="../typings/main.d.ts"/>
-
+import 'ts-helpers';
 import {enableProdMode} from "@angular/core";
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {ELEMENT_PROBE_PROVIDERS} from '@angular/platform-browser';
