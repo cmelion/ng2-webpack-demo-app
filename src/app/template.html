@@ -1,17 +1,15 @@
 <header>
   <nav>
     <a [routerLink]="['Home']">Home</a>
+    <a [routerLink]="['ReactHome']">React Home</a>
     <a [routerLink]="['About']">About</a>
   </nav>
 </header>
-<main>
-  <h1 class="title">Hello from {{api.title}} !</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img class="shield" src="img/shield-with-beta.png">
+<main class="mdl-layout__content page-content">
+  <h1 class="title">{{api.title}}</h1>
 
   <router-outlet></router-outlet>
 </main>
 <footer>
-  <a href="{{ url }}">Webpack Angular 2 Starter</a>
+    <span>Footer goes here</span>
 </footer>

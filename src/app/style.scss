@@ -1,32 +1,44 @@
 // styles applied on :host are applied on the current component, "app" in this case
 :host {
-  display: block;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
 }
 
 header {
-  background-color: #4E274C;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: hsla(31,15%,50%,.1);
+  padding: 16px 0 16px 0;
   width: 100%;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 0;
+
+  nav {
+    padding-left: 16px;
+  }
 }
 
 main {
-  padding: 1em;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-top: 50px;
-  display: block;
+  background: #ffffff url("img/game-of-thrones-raven.jpg") no-repeat center;
+  background-size: cover;
+
+  &.page-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    background: rgba(255,255,255,0.5);
+    color: gray;
+  }
 }
 
 footer {
   text-align: center;
   font-size: 0.8em;
-}
-
-.shield {
-  width: 750px;
-  height: 450px;
+  padding: 10px;
+  background: #404040;
 }

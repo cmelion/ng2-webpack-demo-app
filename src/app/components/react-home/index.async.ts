@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {ItemDetailComponent} from './components/item-detail';
 import {ItemListComponent} from './components/item-list';
+import {NGReact} from './components/ng-react';
 
 export interface Item {
     id: number;
@@ -18,19 +19,19 @@ export interface AppStore {
 
 
 //-------------------------------------------------------------------
-// HOME COMPONENT
+// REACT HOME COMPONENT
 //-------------------------------------------------------------------
 @Component({
-    selector: 'home',
+    selector: 'reacthome',
     providers: [],
-    template: require('./template.html'),
     styles: [require('./style.scss')],
+    template: require('./template.html'),
     directives: [ItemListComponent, ItemDetailComponent],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Home {
+export class ReactHome {
     items: Observable<Array<Item>>;
-    //TODO: Fix typing issue, should be Item ot any
+    //TODO: Fix typing issue, should be Item not any
     //selectedItem: Observable<Item>;
     selectedItem: Observable<any>;
 
@@ -44,6 +45,8 @@ export class Home {
         this.selectedItem.subscribe(v => console.log(v));
 
         this.itemsService.loadItems();
+
+        NGReact.initialize('Hello From React!', this.items);
     }
 
     resetItem() {

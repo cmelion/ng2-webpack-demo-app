@@ -1,10 +1,11 @@
+import 'ts-helpers';
+
 import {
   it,
   fit,
   describe,
   fdescribe,
   inject,
-  injectAsync,
   beforeEachProviders
 } from '@angular/core/testing';
 

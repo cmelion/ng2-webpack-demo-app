@@ -2,12 +2,15 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {Observable} from 'rxjs/Observable';
+import {Item} from '../../index.async';
 
 // No type definition available quick and dirty require instead
 var NotificationSystem = require('react-notification-system');
 
 class NGReactProps {
     public message: string;
+    public items: Observable<Array<Item>>;
 }
 
 class NGReactComponent extends React.Component<NGReactProps, any> {
@@ -43,8 +46,8 @@ class NGReactComponent extends React.Component<NGReactProps, any> {
 }
 
 export class NGReact{
-    static initialize(message){
-        ReactDOM.render(<NGReactComponent message={message}/>, document.getElementById('ng-react-component'));
+    static initialize(message, items){
+        ReactDOM.render(<NGReactComponent message={message} items={items}/>, document.getElementById('ng-react-component'));
     }
 
 }
