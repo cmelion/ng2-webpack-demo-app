@@ -24,6 +24,7 @@ export interface AppStore {
 @Component({
     selector: 'reacthome',
     providers: [],
+    styles: [require('./style.scss')],
     template: require('./template.html'),
     directives: [ItemListComponent, ItemDetailComponent],
     changeDetection: ChangeDetectionStrategy.OnPush

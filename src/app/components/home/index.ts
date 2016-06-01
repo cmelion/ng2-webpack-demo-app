@@ -24,6 +24,7 @@ export interface AppStore {
     selector: 'home',
     providers: [],
     template: require('./template.html'),
+    styles: [require('./style.scss')],
     directives: [ItemListComponent, ItemDetailComponent],
     changeDetection: ChangeDetectionStrategy.OnPush
 })

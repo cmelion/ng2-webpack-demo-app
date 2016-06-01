@@ -1,5 +1,12 @@
 // component styles are encapsulated and only applied to their components
-* {
-  color: #FFEF00;
+:host{
+  display: flex;
 }
 
+.content {
+  flex-grow: 1;
+}
+
+.items {
+  overflow: auto;
+}

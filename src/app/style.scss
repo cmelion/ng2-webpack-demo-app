@@ -9,10 +9,14 @@
 
 header {
   background-color: hsla(31,15%,50%,.1);
-  padding: 16px;
+  padding: 16px 0 16px 0;
   width: 100%;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   margin: 0;
+
+  nav {
+    padding-left: 16px;
+  }
 }
 
 main {
@@ -22,6 +26,10 @@ main {
   background: #ffffff url("img/game-of-thrones-raven.jpg") no-repeat center;
   background-size: cover;
 
+  &.page-content {
+    display: flex;
+    flex-direction: column;
+  }
   .title {
     background: rgba(255,255,255,0.5);
     color: gray;
