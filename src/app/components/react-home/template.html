@@ -1,3 +1,6 @@
+<div id="ng-react-component"
+     class="mdl-cell mdl-cell--6-col">
+</div>
 <div class="mdl-grid content">
   <items-list [items]="items | async"
               class="mdl-cell mdl-cell--6-col items"
@@ -8,5 +11,4 @@
           class="mdl-cell mdl-cell--6-col"
           (saved)="saveItem($event)" (cancelled)="resetItem($event)"
           [item]="selectedItem | async">Select an Item</item-detail>
-  <div id="ng-react-component"></div>
 </div>
