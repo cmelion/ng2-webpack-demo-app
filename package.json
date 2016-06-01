@@ -10,7 +10,7 @@
     "clean-start": "npm run clean && npm start",
     "client": "concurrently \"npm run docker-client\" \"npm run delayed-open\"",
     "delayed-open": "sleep 5 && open http://localhost:2368",
-    "docker-client": "webpack-dev-server --host=0.0.0.0 --hot --inline  --progress --port 2368 & wait",
+    "docker-client": "webpack-dev-server --host=0.0.0.0 --hot --inline --port 2368 & wait",
     "docker-open-terminal": "docker exec -i ${PWD##*/} /bin/bash",
     "docker-server": "concurrently \"npm run server\" \"npm run docker-client\"",
     "docker-start": "docker-compose --p ${PWD##*/} up",
