@@ -10,4 +10,5 @@
             (saved)="saveItem($event)" (cancelled)="resetItem($event)"
             [item]="selectedItem | async">Select an Item</item-detail>
   </div>
+  <react-component [component]="embedComponent" [props]="embedComponentProps">
 </div>
