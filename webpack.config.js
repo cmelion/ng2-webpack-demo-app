@@ -65,10 +65,12 @@ module.exports = (function makeWebpackConfig() {
      * Entry
      * Reference: http://webpack.github.io/docs/configuration.html#entry
      */
-    config.entry = isTestEnv ? {} : {
-        'vendor': './src/vendor.ts',
-        'app': './src/bootstrap.ts' // our angular app
-    };
+    config.entry = isTestEnv ? {} : [
+        'webpack-hot-middleware/client',
+        'webpack/hot/dev-server',
+         './src/vendor.ts',
+         './src/bootstrap.ts' 
+    ];
 
     /**
      * Output
