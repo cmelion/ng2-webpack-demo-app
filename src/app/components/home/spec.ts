@@ -1,3 +1,4 @@
+import { provide } from '@angular/core';
 import {
   it,
   fit,
@@ -9,11 +10,18 @@ import {
 
 // Load the implementations that should be tested
 import {Home} from './index';
+import {ItemsService} from '../../services/api/items';
+
+
+class MockItemsService {
+  public loadItems: string = 'Mocked Service';
+}
 
 describe('Home', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEachProviders(() => [
-    Home
+    Home,
+    provide(ItemsService, {useClass: MockItemsService})
   ]);
 
   it('should log ngOnInit', inject([Home], (home) => {
