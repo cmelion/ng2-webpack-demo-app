@@ -44,11 +44,6 @@
       "name": "test caf",
       "description": "just another day",
       "id": 16
-    },
-    {
-      "name": "http post test",
-      "description": "these are the posts of our lives",
-      "id": 17
     }
   ]
 }
