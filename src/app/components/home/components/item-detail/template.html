@@ -5,15 +5,21 @@
     </div>
     <div class="mdl-card__supporting-text">
         <form novalidate>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <div class="mdl-textfield
+                        mdl-js-textfield
+                        mdl-textfield--floating-label
+                        {{selectedItem.name ? 'is-dirty': ''}}">
                 <input [(ngModel)]="selectedItem.name"
                        id="itemname"
-                       class="mdl-textfield__input"
+                       class="mdl-textfield__input "
                        type="text"/>
                 <label class="mdl-textfield__label" for="itemname">Name</label>
             </div>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <div class="mdl-textfield
+                        mdl-js-textfield
+                        mdl-textfield--floating-label
+                        {{selectedItem.description ? 'is-dirty': ''}}">
                 <input [(ngModel)]="selectedItem.description"
                        id="description"
                        class="mdl-textfield__input" type="text"/>
