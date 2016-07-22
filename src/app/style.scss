@@ -1,3 +1,14 @@
+// styles in src/app directory are applied to the whole page
+body {
+  background: #628084;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #03A9F4;
+}
+
 // styles applied on :host are applied on the current component, "app" in this case
 :host {
   height: 100vh;
@@ -8,7 +19,7 @@
 }
 
 header {
-  background-color: hsla(31,15%,50%,.1);
+  background-color: rgb(81, 44, 135);
   padding: 16px 0 16px 0;
   width: 100%;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -23,8 +34,8 @@ main {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background: #ffffff url("img/game-of-thrones-raven.jpg") no-repeat center;
-  background-size: cover;
+  background: #d5daff url("img/redux-fish.png") no-repeat center;
+  background-size: contain;
 
   &.page-content {
     display: flex;
@@ -41,4 +52,5 @@ footer {
   font-size: 0.8em;
   padding: 10px;
   background: #404040;
+  color: white;
 }

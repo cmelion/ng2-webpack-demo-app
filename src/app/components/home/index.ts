@@ -1,3 +1,5 @@
+declare var componentHandler: any;
+
 import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {ItemsService} from '../../services/api/items';
 import {Observable} from 'rxjs/Observable';
@@ -44,6 +46,8 @@ export class Home {
         this.selectedItem.subscribe(v => console.log(v));
 
         this.itemsService.loadItems();
+        // Ensure material-design-lite effects are applied
+        componentHandler.upgradeDom();
     }
 
     resetItem() {
