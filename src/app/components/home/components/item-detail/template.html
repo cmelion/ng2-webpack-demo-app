@@ -5,18 +5,19 @@
     </div>
     <div class="mdl-card__supporting-text">
         <form novalidate>
-            <div class="mdl-textfield mdl-js-textfield">
-                <label>Attribution</label>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input [(ngModel)]="selectedItem.name"
-                       placeholder="Enter a name"
-                       class="mdl-textfield__input" type="text">
+                       id="itemname"
+                       class="mdl-textfield__input"
+                       type="text"/>
+                <label class="mdl-textfield__label" for="itemname">Attribution</label>
             </div>
 
-            <div class="mdl-textfield mdl-js-textfield">
-                <label>Quote</label>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input [(ngModel)]="selectedItem.description"
-                       placeholder="Enter a description"
-                       class="mdl-textfield__input" type="text">
+                       id="quote"
+                       class="mdl-textfield__input" type="text"/>
+                <label class="mdl-textfield__label" for="quote">Quote</label>
             </div>
         </form>
     </div>

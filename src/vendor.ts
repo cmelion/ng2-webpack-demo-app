@@ -3,6 +3,7 @@
 // Polyfills
 import 'es6-shim';
 import 'reflect-metadata';
+import 'material-design-lite/material.js';
 require('zone.js/dist/zone');
 
 
