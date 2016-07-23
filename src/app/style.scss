@@ -19,7 +19,7 @@ a {
 }
 
 header {
-  background-color: rgb(81, 44, 135);
+  background-color: #502b86;
   padding: 16px 0 16px 0;
   width: 100%;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -34,7 +34,7 @@ main {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background: #d5daff url("img/redux-fish.png") no-repeat center;
+  background: #e9ebf8 url("img/redux-fish.png") no-repeat center;
   background-size: contain;
 
   &.page-content {
@@ -51,6 +51,6 @@ footer {
   text-align: center;
   font-size: 0.8em;
   padding: 10px;
-  background: #404040;
+  background: #7d2a8b;
   color: white;
 }

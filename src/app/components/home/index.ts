@@ -46,6 +46,10 @@ export class Home {
         this.selectedItem.subscribe(v => console.log(v));
 
         this.itemsService.loadItems();
+
+    }
+
+    ngAfterViewInit() {
         // Ensure material-design-lite effects are applied
         componentHandler.upgradeDom();
     }

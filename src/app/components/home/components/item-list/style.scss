@@ -4,6 +4,16 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.8);
   text-align: left;
+
+  &:first-of-type {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  &:last-of-type {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
 }
 .item-card .mdl-textfield {
   width: 100%;
