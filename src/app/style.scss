@@ -40,6 +40,7 @@ main {
   &.page-content {
     display: flex;
     flex-direction: column;
+    height: 100%
   }
   .title {
     background: rgba(255,255,255,0.5);

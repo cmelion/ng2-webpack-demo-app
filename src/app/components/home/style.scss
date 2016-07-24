@@ -9,4 +9,8 @@
 
 .items {
   overflow: auto;
+  // Fix for Safari height issues with scrollable elements
+  @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+    height: calc(100vh - 235px);
+  }
 }
