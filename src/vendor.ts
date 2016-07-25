@@ -3,7 +3,11 @@
 // Polyfills
 import 'es6-shim';
 import 'reflect-metadata';
-import 'material-design-lite/material.js';
+import 'material-design-lite/src/mdlComponentHandler.js';
+import 'material-design-lite/src/button/button';
+import 'material-design-lite/src/layout/layout';
+import 'material-design-lite/src/ripple/ripple';
+import 'material-design-lite/src/textfield/textfield';
 require('zone.js/dist/zone');
 
 
