@@ -14,7 +14,7 @@ describe('Api Service', () => {
   beforeEachProviders(() => [Api]);
 
   it('should ...', inject([Api], (api:Api) => {
-    expect(api.title).toBe('Game of Quotes');
+    expect(api.title).toBe('redux-observable demo');
   }));
 
 });
