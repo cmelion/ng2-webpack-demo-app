@@ -2,6 +2,7 @@ web:
   image: cmelion/generator-ng2-webpack:latest
   volumes:
     - ./package.json:/home/yeoman/client/package.json
+    - ./webpack.config.js:/home/yeoman/client/webpack.config.js
     - ./src:/home/yeoman/client/src
     - ./json-server:/home/yeoman/client/json-server
   ports:
