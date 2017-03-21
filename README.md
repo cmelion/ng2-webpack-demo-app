@@ -45,6 +45,9 @@ $ cd my-app
 
 # start the server
 $ npm start
+
+# if you have docker installed
+$ docker-compose up
 ```
 
 go to [http://localhost:2368](http://localhost:2368) in your browser.
